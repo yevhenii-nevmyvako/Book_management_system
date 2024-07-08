@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "published_date": "1997-06-26",
+        "isbn": "9780747532743",
+        "pages": 223
+    },
+    {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published_date": "1960-07-11",
+        "isbn": "9780061120084",
+        "pages": 281
+    },
+    {
+        "id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "published_date": "1949-06-08",
+        "isbn": "9780451524935",
+        "pages": 328
+    },
+    {
+        "id": 4,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "published_date": "1951-07-16",
+        "isbn": "9780316769488",
+        "pages": 277
+    },
+    {
+        "id": 5,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "published_date": "1813-01-28",
+        "isbn": "9780141439518",
+        "pages": 279
+    },
+    {
+        "id": 6,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published_date": "1925-04-10",
+        "isbn": "9780743273565",
+        "pages": 180
+    },
+    {
+        "id": 7,
+        "title": "Moby-Dick",
+        "author": "Herman Melville",
+        "published_date": "1851-10-18",
+        "isbn": "9780142437247",
+        "pages": 720
+    },
+    {
+        "id": 8,
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "published_date": "1932-01-01",
+        "isbn": "9780060850524",
+        "pages": 288
+    },
+    {
+        "id": 9,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "published_date": "1937-09-21",
+        "isbn": "9780261102217",
+        "pages": 310
+    },
+    {
+        "id": 10,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "published_date": "1954-07-29",
+        "isbn": "9780261102385",
+        "pages": 1178
+    },
+    {
+        "id": 11,
+        "title": "The Chronicles of Narnia",
+        "author": "C.S. Lewis",
+        "published_date": "1950-10-16",
+        "isbn": "9780066238500",
+        "pages": 767
+    },
+    {
+        "id": 12,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "published_date": "1869-01-01",
+        "isbn": "9780192833983",
+        "pages": 1392
+    },
+    {
+        "id": 13,
+        "title": "The Odyssey",
+        "author": "Homer",
+        "published_date": "0700-01-01",
+        "isbn": "9780140268867",
+        "pages": 541
+    },
+    {
+        "id": 14,
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "published_date": "1818-01-01",
+        "isbn": "9780141439471",
+        "pages": 280
+    },
+    {
+        "id": 15,
+        "title": "The Picture of Dorian Gray",
+        "author": "Oscar Wilde",
+        "published_date": "1890-06-20",
+        "isbn": "9780486278070",
+        "pages": 254
+    },
+        {
+        "id": 16,
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "published_date": "1979-10-12",
+        "isbn": "9780345391803",
+        "pages": 224
+    },
+    {
+        "id": 17,
+        "title": "The Brothers Karamazov",
+        "author": "Fyodor Dostoevsky",
+        "published_date": "1880-11-26",
+        "isbn": "9780374528379",
+        "pages": 796
+    },
+    {
+        "id": 18,
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "published_date": "1967-05-30",
+        "isbn": "9780060883287",
+        "pages": 417
+    },
+    {
+        "id": 19,
+        "title": "The Trial",
+        "author": "Franz Kafka",
+        "published_date": "1925-01-01",
+        "isbn": "9780805210551",
+        "pages": 304
+    },
+    {
+        "id": 20,
+        "title": "Slaughterhouse-Five",
+        "author": "Kurt Vonnegut",
+        "published_date": "1969-03-31",
+        "isbn": "9780385333849",
+        "pages": 275
+    },
+    {
+        "id": 21,
+        "title": "Don Quixote",
+        "author": "Miguel de Cervantes",
+        "published_date": "1605-01-01",
+        "isbn": "9780060934347",
+        "pages": 992
+    },
+    {
+        "id": 22,
+        "title": "The Road",
+        "author": "Cormac McCarthy",
+        "published_date": "2006-09-26",
+        "isbn": "9780307387899",
+        "pages": 287
+    },
+    {
+        "id": 23,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "published_date": "1988-01-01",
+        "isbn": "9780061122415",
+        "pages": 197
+    },
+    {
+        "id": 24,
+        "title": "The Sun Also Rises",
+        "author": "Ernest Hemingway",
+        "published_date": "1926-10-22",
+        "isbn": "9780743297332",
+        "pages": 251
+    },
+    {
+        "id": 25,
+        "title": "The Grapes of Wrath",
+        "author": "John Steinbeck",
+        "published_date": "1939-04-14",
+        "isbn": "9780143039433",
+        "pages": 464
+    }
+]
