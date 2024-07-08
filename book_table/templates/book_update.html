@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+    <!-- Include Axios from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../static/CSS/update.css">
+
+</head>
+<body>
+    <h1>Update Book</h1>
+    <form id="updateForm">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{{ book.title }}"><br><br>
+
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" value="{{ book.author }}"><br><br>
+
+        <label for="published_date">Published Date:</label><br>
+        <input type="date" id="published_date" name="published_date" value="{{ book.published_date }}"><br><br>
+
+        <label for="isbn">ISBN:</label><br>
+        <input type="text" id="isbn" name="isbn" value="{{ book.isbn }}" maxlength="13"><br><br>
+
+        <label for="pages">Pages:</label><br>
+        <input type="number" id="pages" name="pages" value="{{ book.pages }}"><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+
+    <br>
+    <a href="/">Back to Books List</a>
+
+<script>
+    const form = document.getElementById('updateForm');
+    const bookId = {{ book.id }};
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Validate Published Date
+        const publishedDateInput = document.getElementById('published_date');
+        const currentDate = new Date();
+        const inputDate = new Date(publishedDateInput.value);
+        if (inputDate > currentDate) {
+            alert('Published Date cannot be in the future.');
+            return;
+        }
+
+        // Validate Pages
+        const pagesInput = document.getElementById('pages');
+        if (pagesInput.value < 1) {
+            alert('Pages should be greater than or equal to 1.');
+            return;
+        }
+
+        // Validate ISBN length
+        const isbnInput = document.getElementById('isbn');
+        if (isbnInput.value.length > 13) {
+            alert('ISBN should not exceed 13 characters.');
+            return;
+        }
+
+        const formData = new FormData(form);
+
+        axios.put(`/books/${bookId}/update`, formData)
+            .then(response => {
+                // Handle successful update
+                console.log('Book updated successfully:', response.data);
+                // Redirect to book detail page
+                window.location.href = `/books/${bookId}`;
+            })
+            .catch(error => {
+                console.error('Error updating book:', error);
+                // Handle error, e.g., display error message to user
+                alert('Error updating book. Please try again.');
+            });
+    });
+</script>
+</body>
+</html>
