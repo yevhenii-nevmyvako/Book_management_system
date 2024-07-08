@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Detail</title>
+    <!-- Подключение Axios из CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../static/CSS/detail.css">
+</head>
+<body>
+    <h1>Book Details</h1>
+    <div>
+        <h2>Title: {{ book.title }}</h2>
+        <p>Author: {{ book.author }}</p>
+        <p>Published Date: {{ book.published_date }}</p>
+        <p>ISBN: {{ book.isbn }}</p>
+        <p>Pages: {{ book.pages }}</p>
+    </div>
+
+    <br>
+    <button onclick="location.href='/books/{{ book.id }}/edit'">Edit Book</button>
+    <button id="deleteButton">Delete Book</button>
+    <a href="/books/">Back to Books List</a>
+
+    <script>
+        const deleteButton = document.getElementById('deleteButton');
+        const bookId = {{ book.id }};
+
+        deleteButton.addEventListener('click', function() {
+            axios.delete(`/books/${bookId}`)
+                .then(response => {
+                    // Handle successful deletion, e.g., redirect to books list
+                    window.location.href = "/";
+                })
+                .catch(error => {
+                    console.error('Error deleting book:', error.response.data);
+                    // Handle error, e.g., display error message to user
+                    alert('Error deleting book: ' + error.response.data.detail);
+                });
+        });
+    </script>
+</body>
+</html>

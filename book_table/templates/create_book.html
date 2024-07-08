@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Book</title>
+    <link rel="stylesheet" href="../../static/CSS/create.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Book</h1>
+        <form action="/books/" method="post" onsubmit="return validateForm()">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" required><br><br>
+
+            <label for="published_date">Published Date:</label><br>
+            <input type="date" id="published_date" name="published_date" required><br><br>
+
+            <label for="isbn">ISBN:</label><br>
+            <input type="text" id="isbn" name="isbn" required><br><br>
+
+            <label for="pages">Pages:</label><br>
+            <input type="number" id="pages" name="pages" required><br><br>
+
+            <button type="submit" class="submit-btn">Create Book</button>
+        </form>
+        <br>
+        <a href="/books/" class="return-btn">Return to Book List</a>
+    </div>
+
+    <script>
+        function validateForm() {
+            const title = document.getElementById('title').value.trim();
+            const author = document.getElementById('author').value.trim();
+            const publishedDate = document.getElementById('published_date').value;
+            const isbn = document.getElementById('isbn').value.trim();
+            const pages = document.getElementById('pages').value;
+
+            // Validate ISBN length
+            if (isbn.length > 13) {
+                alert('ISBN should not exceed 13 characters.');
+                return false;
+            }
+
+            // Validate published date not in the future
+            const currentDate = new Date();
+            if (new Date(publishedDate) > currentDate) {
+                alert('Published Date cannot be in the future.');
+                return false;
+            }
+
+            // Validate pages greater than 0
+            if (parseInt(pages) < 1) {
+                alert('Pages should be greater than 0.');
+                return false;
+            }
+
+            // Form is valid
+            return true;
+        }
+    </script>
+</body>
+</html>

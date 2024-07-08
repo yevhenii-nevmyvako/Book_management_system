@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="../../static/CSS/books.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book List</h1>
+        <p>Total books: {{ total }}</p>
+        <ul id="book-list">
+            {% for book in books %}
+            <li>
+                <a href="/books/{{ book.id }}" class="book-link">
+                    {{ book.title }} by {{ book.author }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- Button to create a new book -->
+        <a href="/books/create/new" class="create-book-btn">Create New Book</a>
+
+        <div class="pagination">
+            {% if skip > 0 %}
+            <a href="?skip=0&limit={{ limit }}" class="pagination-btn">First</a>
+            <a href="?skip={{ skip - limit if skip - limit >= 0 else 0 }}&limit={{ limit }}" class="pagination-btn">Previous</a>
+            {% endif %}
+            {% if more_books %}
+            <a href="?skip={{ next_skip }}&limit={{ limit }}" class="load-more-btn">Load More</a>
+            {% endif %}
+        </div>
+        <a href="/" class="return-btn">Return to Home</a>
+    </div>
+</body>
+</html>
