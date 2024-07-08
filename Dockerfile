@@ -11,6 +11,6 @@ RUN pip install -e .
 
 RUN alembic upgrade head
 
-RUN loading_books 'demo_and_test_data/books_data_fixture.json'
+RUN loading_books demo_and_test_data/books_data_fixture.json
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--reload"]
