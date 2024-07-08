@@ -23,4 +23,3 @@ class BookParam(EnumClass):
     PUBLISHED_DATE = 'published_date'
     ISBN = 'isbn'
     PAGES = 'pages'
-
